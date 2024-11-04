@@ -2,14 +2,44 @@ import Image from "next/image";
 import logo from "@/assets/logo.png";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import Folder from "@/assets/icons/folder.svg";
+import WatchLater from "@/assets/icons/clockfull.svg";
+import Star from "@/assets/icons/starfull.svg";
 
 export default async function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-2">
-      <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2 overflow-scroll">
-        <NavLinks />
+    <aside className="h-full flex flex-col bg-tealDark p-0">
+      <div className="flex md:flex-col md:py-10 md:space-y-6 px-5 h-full nav-page-links pt-0 mt-0 pr-24">
+        <div className="flex flex-row justify-start pl-0">
+          <Link href="/" className="flex flex-row space-x-2 text-left">
+            <Image
+              src={Folder.src}
+              alt="Home Page Icon"
+              width={25}
+              height={25}
+            />
+            <span>Home</span>
+          </Link>
+        </div>
+        <div className="flex flex-row justify-start pl-0">
+          <Link href="/" className="flex flex-row space-x-2 text-left">
+            <Image src={Star.src} alt="Home Page Icon" width={25} height={25} />
+            <span>Favorites</span>
+          </Link>
+        </div>
+        <div className="flex flex-row justify-start pl-0">
+          <Link href="/" className="flex flex-row space-x-2 text-left">
+            <Image
+              src={WatchLater.src}
+              alt="Home Page Icon"
+              width={25}
+              height={25}
+            />
+            <span>Watch Later</span>
+          </Link>
+        </div>
       </div>
-    </div>
+    </aside>
   );
 }
 
