@@ -1,7 +1,7 @@
-export default async function Page() {
+// homepage for non-logged-in users
+export default function Page() {
   return (
-    <div className="flex items-center justify-center h-screen">
-      Hello Cinema Guru
-    </div>
+    <main className="">
+    </main>
   );
 }
