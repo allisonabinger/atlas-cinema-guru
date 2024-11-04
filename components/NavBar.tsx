@@ -15,7 +15,7 @@ const NavBar = async () => {
       <div className="flex items-center space-x-4">
         {session?.user ? (
           <>
-            <p> Welcome, {session.user.email}</p>
+            <span> Welcome, {session.user.email}</span>
             <form action={async () => { 'use server'; await signOut() }} >
               <button
                 type='submit'
