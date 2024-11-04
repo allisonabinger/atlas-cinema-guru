@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Props) {
       <body className={`antialiased  bg-[#00003c] text-white`}>
           <div className="flex h-full flex-col font-poppins w-screen">
           <NavBar />
-            <div className="top-0 left-0 z-40 w-fit h-screen">
+            <div className="top-0 left-0 z-40 w- h-screen">
                 <SideNav />
                 <main className="ui">{children}</main>
             </div>

@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .input-box {
+      @apply border-2 border-teal bg-navy;
+    }
+  }
