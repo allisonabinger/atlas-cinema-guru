@@ -15,10 +15,10 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={`antialiased  bg-[#00003c] text-white`}>
-          <div className="flex h-full flex-col font-poppins">
+      <body className={`antialiased bg-[#00003c] text-white`}>
+          <div className="flex h-full flex-col font-poppins ">
           <NavBar />
-            <div className="top-0 left-0 z-40 w-full h-screen flex flex-row pl-0 ml-0">
+            <div className="top-0 left-0 bottom-0 z-40 w-full h-screen flex flex-row pl-0 ml-0">
                 <SideNav />
                 <div className="w-full">
                     <main className="ui">{children}</main>

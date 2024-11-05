@@ -1,6 +1,7 @@
 "use client";
 import GenreFilter from "@/components/GenreFilter";
 import MovieList from "@/components/MovieList";
+import PageButtons from "@/components/PageButtons";
 import SearchFilter from "@/components/SearchFilter";
 import { useEffect, useState } from "react";
 
@@ -39,9 +40,10 @@ export default function Page() {
         fetchMovies();
       }, [query, minYear, maxYear, genres]);
 
+
   return (
-    <main className="flex flex-col">
-        <div className="search-filter w-full p-6 flex justify-between text-white">
+    <main className="flex flex-col mb-0">
+        <div className="search-filter w-full p-4 pb-0 mb-0 flex justify-between text-white">
             {/* Search Forms */}
             <SearchFilter onSearch={(query, minYear, maxYear) => {
                 setQuery(query);
@@ -52,7 +54,9 @@ export default function Page() {
             <GenreFilter onGenreSelect={(selectedGenres) => setGenres(selectedGenres)} />
         </div>
         <div className="w-auto p-5 mx-0 flex justify-center">
-            <MovieList />
+            <div className="w-full flex justify-center">
+                <MovieList />
+            </div>
         </div>
     </main>
   );
