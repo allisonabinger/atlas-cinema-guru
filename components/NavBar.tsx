@@ -7,7 +7,7 @@ const NavBar = async () => {
   const session = await auth();
 
   return (
-    <header className="bg-teal h-16 w-full flex items-center justify-between px-4 text-navy">
+    <header className="bg-teal w-full flex py-6 items-center justify-between px-4 text-navy">
       <div className="flex items-center">
         <img src={Film.src} alt="Cinema Guru Logo" height={25} width={25} />
         <h1 className="ml-2 text-2xl font-bold">Cinema Guru</h1>
