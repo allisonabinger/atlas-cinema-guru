@@ -30,14 +30,16 @@ export default function GenreFilter({ onGenreSelect}: GenreFilterProps) {
   }, [selectedGenres, onGenreSelect]);
 
   return (
-    <div className="genre-lists">
-      <h2>Genres</h2>
+    <div className="flex flex-1 flex-col p-0 max-w-md">
+      <div className="mb-3">
+          <h2>Genres</h2>
+      </div>
       <div className="flex flex-wrap gap-2">
         {genres.map((genre) => (
                     <button
                     key={genre}
                     onClick={() => toggleGenre(genre)}
-                    className={`border-2 border-teal rounded-full p-1 ${selectedGenres.includes(genre) ? "bg-teal" : "bg-navy"}`}
+                    className={`border-2 border-teal rounded-full p-1 ${selectedGenres.includes(genre) ? "bg-teal text-black" : "bg-navy"}`}
                   >
                     {genre}
                   </button>
