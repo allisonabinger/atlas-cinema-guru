@@ -40,7 +40,7 @@ export default function Page() {
 
   return (
     <main className="flex flex-col">
-        <div className="search-filter w-full p-6 flex items-center justify-between text-white">
+        <div className="search-filter w-full p-6 flex justify-between text-white">
             {/* Search Forms */}
             <SearchFilter onSearch={(query, minYear, maxYear) => {
                 setQuery(query);
