@@ -1,5 +1,6 @@
 "use client";
 import GenreFilter from "@/components/GenreFilter";
+import MovieList from "@/components/MovieList";
 import SearchFilter from "@/components/SearchFilter";
 import { useEffect, useState } from "react";
 
@@ -50,7 +51,9 @@ export default function Page() {
             />
             <GenreFilter onGenreSelect={(selectedGenres) => setGenres(selectedGenres)} />
         </div>
-        <div className="w-full p-10"></div>
+        <div className="w-auto p-5 mx-0 flex justify-center">
+            <MovieList />
+        </div>
     </main>
   );
 }
