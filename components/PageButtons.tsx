@@ -22,7 +22,7 @@ const PageButtons = ({ currentPage, totalPages, onPageChange }: PageButtonsProps
     }
   };
   return (
-    <div className="flex items-center justify-center gap-2 my-5 py-5">
+    <div className="flex items-center justify-center gap-2 mb-5 p-3">
       <button
         onClick={handlePrevious}
         disabled={isFirstPage}

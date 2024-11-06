@@ -22,7 +22,7 @@ export default function SearchFilter({ onSearch }: SearchFilterProps) {
       }, [query, minYear, maxYear, onSearch]);
 
   return (
-    <div className="flex-1 flex flex-col p-0 mb-4 max-w-sm">
+    <div className="flex-1 flex flex-col p-0 mb-4 max-w-md">
       <div className="flex flex-col mb-4">
         <h2>Search</h2>
         <input

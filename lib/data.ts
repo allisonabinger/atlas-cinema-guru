@@ -41,7 +41,6 @@ export async function fetchTitles(
       .where("titles.title", "ilike", `%${query}%`)
       .where("titles.genre", "in", genres)
       .orderBy("titles.title", "asc")
-      .limit(6)
       .offset((page - 1) * 6)
       .execute();
 
