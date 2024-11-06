@@ -5,30 +5,25 @@ import ClockOutline from "@/assets/icons/clockoutline.svg";
 import ClockFull from "@/assets/icons/clockfull.svg";
 import Image from "next/image";
 
+interface Movie {
+    id: string;
+    title: string;
+    synopsis: string;
+    released: number;
+    genre: string;
+    favorited?: boolean;
+    watchLater?: boolean;
+    image: string;
+}
+
 type MovieProps = {
-  id: string;
-  title: string;
-  synopsis: string;
-  released: number;
-  genre: string;
-  favorited: boolean;
-  watchLater: boolean;
-  image: string;
+    movie: Movie;
 };
 
-export function MovieCard({
-  id,
-  title,
-  synopsis,
-  released,
-  genre,
-  favorited,
-  watchLater,
-  image,
-}: MovieProps) {
+export function MovieCard({ movie }: MovieProps) {
   return (
-    <div className="relative group overflow-hidden shadow-lg w-96 border-2 border-teal rounded-2xl flex justify-center">
-      <img src={image} alt={title} className="w-full rounded-lg " />
+    <div className="relative group  shadow-lg w-full border-2 border-teal rounded-2xl flex justify-center">
+      <img src={movie.image} alt={movie.title} className="size-96 rounded-2xl" />
 
       {/* Overlay */}
       <div className="absolute top-3 right-3 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out">
@@ -51,12 +46,12 @@ export function MovieCard({
             />
         </button>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-navy opacity-0 group-hover:opacity-90 transition-opacity duration-200 flex flex-col p-4 text-left">
+      <div className="rounded-b-2xl absolute bottom-0 left-0 right-0 h-2/5 bg-navy opacity-0 group-hover:opacity-90 transition-opacity duration-200 flex flex-col p-4 text-left">
         <h1 className="text-lg mb-2">
-          {title} ({released})
+          {movie.title} ({movie.released})
         </h1>
-        <p className="mb-3 text-sm">{synopsis}</p>
-        <div className="genre rounded-full bg-teal p-2 w-fit gap-2 text-black">{genre}</div>
+        <p className="mb-3 text-sm">{movie.synopsis}</p>
+        <div className="genre rounded-full bg-teal p-2 w-fit gap-2 text-black">{movie.genre}</div>
       </div>
     </div>
   );
