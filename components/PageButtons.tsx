@@ -1,8 +1,16 @@
 'use client';
-const PageButtons = ({ currentPage, totalPages, onPageChange }: { currentPage: number, totalPages: number, onPageChange: (page: number) => void }) => {
+
+interface PageButtonsProps {
+    currentPage: number;
+    totalPages: number;
+    onPageChange: (page: number) => void; // Function to change the current page
+  }
+
+const PageButtons = ({ currentPage, totalPages, onPageChange }: PageButtonsProps) => {
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === totalPages;
 
+  // onPageChange affects page (parent elmt)
   const handlePrevious = () => {
     if (currentPage > 1) {
       onPageChange(currentPage - 1);
