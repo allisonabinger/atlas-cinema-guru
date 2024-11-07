@@ -27,7 +27,7 @@ export function MovieCard({ movie }: MovieProps) {
   const [inWatchLater, setInWatchLater] = useState<boolean>(movie.watchLater);
 
   const toggleFavorite = async (id: string) => {
-    console.log("favorite button pressed");
+    // console.log("favorite button pressed");
     setInFavorites((prev) => !prev);
     // makes api call, posts if not in faves, deletes if it is
     const response = await fetch(`/api/favorites/${id}`, {

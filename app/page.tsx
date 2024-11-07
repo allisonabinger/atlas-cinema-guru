@@ -55,7 +55,7 @@ export default function Page() {
       const response = await fetch("/api/titles");
       const data = await response.json();
 
-      console.log(data);
+    //   console.log(data);
       setAllMovies(data.title);
       setFilteredMovies(data.title);
       setIsLoading(false);
@@ -86,7 +86,7 @@ export default function Page() {
     }
 
     setFilteredMovies(filtered);
-    console.log(filteredMovies);
+    // console.log(filteredMovies);
     setTotalPages(Math.ceil(filtered.length / moviesPerPage));
     setCurrentPage(1);
   };

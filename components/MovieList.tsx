@@ -31,7 +31,7 @@ export default function MovieList({ movieList }: MovieListProps) {
         const favoritesData = await favoritesRes.json();
         const watchLaterData = await watchLaterRes.json();
 
-        console.log("Favorites Data: ", favoritesData)
+        // console.log("Favorites Data: ", favoritesData)
 
         const favorites = Array.isArray(favoritesData.favorites) ? favoritesData.favorites : [];
         const watchLater = Array.isArray(watchLaterData.favorites) ? watchLaterData.watchLater : [];
@@ -39,7 +39,7 @@ export default function MovieList({ movieList }: MovieListProps) {
         setFavorites(new Set(favorites.map((movie: Movie) => movie.id)));
         setWatchLater(new Set(watchLater.map((movie: Movie) => movie.id)));
 
-        console.log("Favorites after stored in set: ", favorites)
+        // console.log("Favorites after stored in set: ", favorites)
       } catch (err) {
         console.error("Error fetching favorites and watch later data:", err);
       }
