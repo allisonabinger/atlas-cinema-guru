@@ -32,7 +32,7 @@ export default function SideNav() {
           </Link>
         </div>
         <div className="flex flex-row justify-start pl-0">
-          <Link href="/" className="flex flex-row space-x-2 text-left text-lg">
+          <Link href="/favorites" className="flex flex-row space-x-2 text-left text-lg">
             <Image src={Star.src} alt="Home Page Icon" width={30} height={30} />
             {(expanded) && <span>Favorites</span>}
           </Link>
