@@ -32,7 +32,7 @@ export default function Page() {
       setAllMovies(data.watchLater);
     //   setFilteredMovies(data.title);
       setIsLoading(false);
-      setTotalPages(Math.ceil(data.title.length / moviesPerPage));
+      setTotalPages(Math.ceil(data.watchLater.length / moviesPerPage));
     } catch (err) {
       console.error("Error fetching titles: ", err);
     } finally {
